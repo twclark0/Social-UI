@@ -5,6 +5,7 @@ import Nav from './Nav.js';
 export default class Main extends React.Component {
   componentDidMount() {
     this.props.nuviData();
+    document.cookie = "SESSION=NUVI-12345";
   }
   render() {
     return (
