@@ -1,8 +1,6 @@
 # Social-UI Dashboard
 
 
-Please clone repo and then do the following:
--------------------
 ##### npm install
 
 ##### npm start
