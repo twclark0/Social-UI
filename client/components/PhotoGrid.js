@@ -15,18 +15,9 @@ class PhotoGrid extends React.Component {
   }
   handleClick(s)  {
       let ctrl = [];
-      if(s === true) {
-        ctrl = this.props.nuvi.filter(x => x.provider);
-      }
-      else {
-        ctrl = this.props.nuvi.filter(x => x.provider === s);
-      }
+      if (s === true) ctrl = this.props.nuvi.filter(x => x.provider);
+      else ctrl = this.props.nuvi.filter(x => x.provider === s);
       this.setState({dataList : ctrl});
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.addItem(this.refs.item.value);
   }
   render() {
     return (
@@ -34,10 +25,9 @@ class PhotoGrid extends React.Component {
         <div className='sidebar'>
           <h1 onClick={() => {this.handleClick(true)}}>Dashboard</h1>
           <ul className="sep">
-            <li onClick={() => {this.handleClick('facebook')}}>Facebook</li>
-            <li onClick={() => {this.handleClick('instagram')}}>Instagram</li>
-            <li onClick={() => {this.handleClick('tumblr')}}>Tumbler</li>
-            <li onClick={() => {this.handleClick('twitter')}}>Twitter</li>
+            {['facebook', 'instagram', 'tumblr', 'twitter'].map((li, i) => (
+                <li onClick={() => this.handleClick(li)}>{li.toUpperCase()}</li>
+            ))}
           </ul>
         </div>
         <div className="photo-grid">

@@ -3,7 +3,7 @@ import Photo from './Photo';
 
 class Single extends React.Component  {
   render() {
-    const i = this.props.nuvi.findIndex((post)=> post.id === this.props.params.postId);
+    const i = this.props.test ? 1 : this.props.nuvi.findIndex((post)=> post.id === this.props.params.postId);
     return (
       <div className="single-photo">
         <Photo key={i} i={i} post={this.props.nuvi} {...this.props} />
