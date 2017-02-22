@@ -3,14 +3,16 @@
 
 Please clone repo and then do the following:
 -------------------
-npm install
-----------
-npm start
-----------
+##### npm install
 
-## Go to http://localhost:7770/
+##### npm start
 
-### Run tests
+### Go to http://localhost:7770/
 
-npm test
---------
+Run tests
+---------
+#### npm test
+
+
+
+![alt tag](http://www.tylersfiles.com/wp-content/uploads/Screen-Shot-2017-02-22-at-2.49.16-PM.png)
